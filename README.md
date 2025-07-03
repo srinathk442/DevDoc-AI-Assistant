@@ -99,9 +99,19 @@ To deploy:
 
   ### 1. Home Page
 
+
+  <img src="screenshots/home.png" width="600"/>
+
   ### 2. Login Page
 
+
+  <img src="screenshots/login.png" width="600"/>
+
   ### 3. Chat Interface
+
+
+  <img src="screenshots/chat.png" width="600"/>
+
 
 ---
 
