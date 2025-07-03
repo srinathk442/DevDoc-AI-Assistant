@@ -26,25 +26,34 @@ export default function RegisterPage() {
 
       setSuccess("User registered successfully! Redirecting to login...");
       setTimeout(() => router.push("/login"), 2000);
-    } catch (err: any) {
-      setError(err.message || "Registration failed");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Registration failed");
+      }
     }
   };
 
   return (
     <main className="min-h-screen bg-blue-900 text-white flex items-center justify-center px-4">
       <div className="bg-white text-black p-8 rounded-xl shadow-xl w-full max-w-md">
-          <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
-          
-                  {error && (
-                    <div className="mb-4 bg-red-100 text-red-700 p-3 rounded text-center font-medium shadow">
-                      {error}
-                    </div>
-                  )}
-          
-                  <AuthForm type="register" onSubmit={handleRegister} />
-                </div>
-              </main>
-            );
-  }
-          
+        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
+
+        {error && (
+          <div className="mb-4 bg-red-100 text-red-700 p-3 rounded text-center font-medium shadow">
+            {error}
+          </div>
+        )}
+
+        {success && (
+          <div className="mb-4 bg-green-100 text-green-700 p-3 rounded text-center font-medium shadow">
+            {success}
+          </div>
+        )}
+
+        <AuthForm type="register" onSubmit={handleRegister} />
+      </div>
+    </main>
+  );
+}

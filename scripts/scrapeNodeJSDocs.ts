@@ -30,9 +30,14 @@ async function scrapePage(url: string) {
         scrapePage(fullLink);
       }
     });
-  } catch (err) {
+  } catch (err: unknown) {
+  if (err instanceof Error) {
     console.error(`Failed to scrape ${url}:`, err.message);
+  } else {
+    console.error(`Failed to scrape ${url}:`, err);
   }
+}
+
 }
 
 (async () => {

@@ -24,9 +24,13 @@ export default function LoginPage() {
 
       localStorage.setItem("token", data.token);
       router.push("/chat");
-    } catch (err: any) {
-      setError(err.message || "Login failed");
-    }
+    } catch (err: unknown) {
+  if (err instanceof Error) {
+    setError(err.message);
+  } else {
+    setError("Login failed");
+  }
+}
   };
 
   return (
