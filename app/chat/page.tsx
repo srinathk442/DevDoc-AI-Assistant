@@ -53,7 +53,6 @@ export default function ChatPage() {
 
  return (
   <div className="h-screen flex flex-col bg-gradient-to-br from-blue-50 to-blue-100 text-gray-800">
-    
 
     {/* Chat Section */}
     <div className="flex-grow overflow-y-auto p-6">
@@ -72,8 +71,8 @@ export default function ChatPage() {
       </div>
     )}
 
-    {/* Input Section */}
-    <div className="p-6 border-t bg-white/90 shadow-inner">
+    {/* Input Section: sticky at bottom */}
+    <div className="sticky bottom-0 bg-white/90 shadow-inner border-t p-6">
       <div className="max-w-5xl mx-auto">
         <ChatInput onSendMessage={handleSendMessage} disabled={loading} />
       </div>
