@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import ChatInput from "../components/ChatInput";
 import ChatMessages from "../components/ChatMessages";
-import Header from "../components/Header"; // ← import
 
 export default function ChatPage() {
   const router = useRouter();
@@ -54,7 +53,7 @@ export default function ChatPage() {
 
  return (
   <div className="h-screen flex flex-col bg-gradient-to-br from-blue-50 to-blue-100 text-gray-800">
-    <Header />
+    
 
     {/* Chat Section */}
     <div className="flex-grow overflow-y-auto p-6">
