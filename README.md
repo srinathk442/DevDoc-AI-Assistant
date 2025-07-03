@@ -42,7 +42,7 @@ The project includes a script that:
 - Saves cleaned `.txt` files into `docs/full-nodejs/` etc.
 - Later, the content is split into chunks, embedded via OpenAI, and stored in MongoDB for vector search.
 
-  ---
+---
 
 ## 🔐Authentication
 Implemented simple and secure authentication using:
@@ -55,7 +55,7 @@ Implemented simple and secure authentication using:
 
 - Route guards using useEffect to prevent access to /chat without login
 
-  ---
+---
 
  ## 🗂️Folder Structure
 
@@ -93,7 +93,7 @@ To deploy:
 
 - Link:- [DevDoc AI Assistant](https://dev-doc-ai-assistant-mykh7mitx.vercel.app/)
 
-  ---
+---
 
   ## 📸Screenshots
 
@@ -103,7 +103,7 @@ To deploy:
 
   ### 3. Chat Interface
 
-  ---
+---
 
   ## 👤 Author
 
